@@ -1,0 +1,30 @@
+# Application name
+application.name = Gestion des étudiants
+
+# Messages for Details page
+id = Id
+nom = Nom
+prenom = Prenom
+niveau = Niveau
+etudiants.details = Etudiant: {0}
+
+# Messages for New Student page
+etudiants.form = Détails de l'étudiant
+etudiants.new = (nouveau)
+etudiants.new.command = Ajouter
+etudiants.new.submit = Ajouter
+etudiants.new.success = Etudiant {0} ajouté.
+
+# Messages for the Edit Product page
+etudiants.edit = (existant)
+etudiants.edit.command = Éditer
+etudiants.edit.submit = Réactualiser
+etudiants.edit.success = Etudiant {0} mis à jour.
+etudiants.edit.notfound = Etudiant non trouvé.
+
+# Messages for the Remove Student Page
+etudiants.remove.command = Supprimer
+etudiants.remove.success = Etudiant {0} retiré.
+
+validation.errors = Veuillez corriger les erreurs sur le formulaire
+validation.ean.duplicate = Un produit avec ce code EAN existe déjà

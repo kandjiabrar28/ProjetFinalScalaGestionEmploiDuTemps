@@ -1,0 +1,24 @@
+@import play.api.Configuration
+@import helper._
+
+@(etudiantForm: Form[Etudiant])(implicit flash: Flash, lang: Lang, messages: Messages, config: Configuration)
+
+@main(Messages("etudiants.form")) {
+  <h2>@Messages("etudiants.form")</h2>
+
+  @helper.form(action = routes.Etudiants.update(etudiantForm.data("id").toLong)) {
+    <fieldset>
+      <legend>
+        @Messages("etudiants.details", Messages("etudiants.edit"))
+      </legend>
+      @helper.inputText(etudiantForm("id"), 'readonly -> "readonly", '_showErrors -> false, '_showConstraints -> false)
+      @helper.inputText(etudiantForm("nom"))
+      @helper.inputText(etudiantForm("prenom"))
+      @helper.inputText(etudiantForm("niveau"))
+    </fieldset>
+
+    <p><input type="submit" class="btn primary"
+      value='@Messages("etudiants.edit.submit")'>
+    </p>
+  }
+}

@@ -1,0 +1,33 @@
+@import play.api.Configuration
+
+@(etudiants: List[Etudiant])(implicit flash: Flash,lang: Lang, messages: Messages, config: Configuration)
+
+@main(Messages("application.name")) {
+  <dl class="etudiants">
+    @for(etudiant <- etudiants) {
+      <dt>
+        @* BUTTON LINKS TO ETUDIANT *@
+        <a href="@controllers.routes.Etudiants.show(etudiant.id)">
+          @etudiant.id
+        </a>
+        <a href="@controllers.routes.Etudiants.show(etudiant.id)">
+          @etudiant.nom
+        </a>
+        <a href="@controllers.routes.Etudiants.show(etudiant.id)">
+          @etudiant.prenom
+        </a>
+        <a href="@controllers.routes.Etudiants.show(etudiant.id)">
+          @etudiant.niveau
+        </a>
+      </dt>
+
+  </dl>
+
+  @* BUTTON TO ADD NEW ETUDIANT *@
+  <p>
+    <a href="@controllers.routes.Etudiants.newEtudiant()" class="btn primary">
+      <i class="icon-plus"></i> @Messages("etudiants.new.command")
+    </a>
+  </p>
+
+}
