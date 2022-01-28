@@ -3,7 +3,7 @@ Projet Final Scala
 Application de gestion d'école et emploi du temps
 =========================================
 
-- Application avec Play Framework 2.4 MVC pour implémenter les opérations CRUD sur des classes : Etudiant, Professeur, Matière, Cours et Evaluation.
+- Application avec Play Framework 2.2.6 MVC pour implémenter les opérations CRUD sur des classes : Etudiant, Professeur, Matière, Cours et Evaluation.
 - Montre comment la composition de Template est possible dans Play Framework.
 - Utilise l'injection de dépendances pour injecter la configuration dans les contrôleurs.
 - Implémente l'internationalisation.
